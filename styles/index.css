@@ -130,7 +130,7 @@ body > * {width:1920px;}
 /* 개별 */
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus > p {}
-#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus > p img {}
+#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus > p img {position:relative; top:80px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info h2 {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info p {}
@@ -148,8 +148,8 @@ body > * {width:1920px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info dl dd span:nth-child(4) {background-color:#E34343; margin-right:0;}
 /* asus */
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac {}
-#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac > p {top:50px; right:130px;}
-#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac > p img {}
+#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac > p {}
+#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac > p img {position:relative; top:30px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info h2 {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info p {}
