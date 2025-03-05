@@ -20,7 +20,8 @@ gsap.to('.page2 .info',{
 });
 
 const webSwiper = new Swiper('.page3 .web_swiper',{
-    speed:1000,
+    autoplay:{delay:4000,},
+    speed:1500,
     pagination:{
         el:'.web_swiper .swiper-pagination',
         type:'bullets',

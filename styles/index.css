@@ -134,6 +134,7 @@ body > * {width:1920px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info h2 {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info p {}
+#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info p:nth-child(3) {border:1px solid #595959; font-size:0.88rem; letter-spacing: -0.02em; padding:5px 10px; border-radius:20px; margin-left:10px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info .link_list {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info .link_list a {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .asus .site_info .repair {}
@@ -152,7 +153,6 @@ body > * {width:1920px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info h2 {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info p {}
-#main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info p:nth-child(3) {border:1px solid #595959; font-size:0.88rem; letter-spacing: -0.02em; padding:5px 10px; border-radius:20px; margin-left:10px;}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info .link_list {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info .link_list a {}
 #main .swiper-wrapper .page3 .web_swiper .swiper-wrapper .mac .site_info .repair {}
