@@ -265,6 +265,13 @@ body > * {min-width:1920px;}
 #main .swiper-wrapper .page5 .txt p:nth-child(2) {font-size:2.0rem; font-weight:500; margin:23px 0 30px 0;}
 #main .swiper-wrapper .page5 .txt p:nth-child(4) {margin:20px 0;}
 
+#main .swiper-wrapper .page6 {display:flex; align-items: center; justify-content: center; flex-flow:column nowrap;}
+#main .swiper-wrapper .page6 h1 {
+    text-align:center;
+    font-size:3.25rem; font-weight:600; color:#0046DD; line-height:1.2; letter-spacing: -0.02em;  z-index:999;
+}
+#main .swiper-wrapper .page6 a {display:block; background-color:#5546DD; font-weight:500; padding:10px 20px; color:#fff; border-radius:20px; margin-top:20px;}
+#main .swiper-wrapper .page6 a:hover {background-color:#fff; color:#5546DD; font-weight:500;}
 @keyframes txtleft {
     0%{opacity:0; left:-100px;}
     100%{opacity:1; left:0px;}
