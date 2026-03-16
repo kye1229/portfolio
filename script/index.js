@@ -47,6 +47,14 @@ const snsSwiper = new Swiper('.page4 .sns_contents',{
     spaceBetween:20,
 });
 
+const expSwiper = new Swiper('.page6 .exp_swiper',{
+    // autoplay:{delay:0},
+    loop:true,
+    speed:8000,
+    slidesPerview:1,
+    spaceBetween:20,
+});
+
 const activeScroll = document.querySelector('.design_right .active-scrollbar');
 const detailSwiper = new Swiper('.design_right .detail_page',{
     autoplay:{delay:2500,},

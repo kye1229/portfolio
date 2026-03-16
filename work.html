@@ -1,0 +1,356 @@
+<!-- =====================================================
+     💼 Work Experience 섹션 — 포트폴리오 index.html에 추가
+     기존 My Design Project 섹션 바로 위에 붙여넣으세요!
+     이미지 파일은 images 폴더에 넣어주세요.
+====================================================== -->
+
+<style>
+    /* ── Work Experience 섹션 ── */
+    #work-experience {
+      padding: 100px 0;
+      background-color: #f9f9f9;
+    }
+  
+    #work-experience .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 60px;
+      padding: 0 120px;
+    }
+  
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 0 120px;
+    }
+  
+    .work-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+  
+    .work-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+  
+    /* 여러 장 이미지 묶인 카드 (project_web 시리즈용) */
+    .work-card .card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+    }
+  
+    /* 여러 페이지 썸네일 그리드 */
+    .work-card .thumb-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px;
+      background: #eee;
+    }
+  
+    .work-card .thumb-grid img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+    }
+  
+    .work-card .card-body {
+      padding: 24px 28px 28px;
+    }
+  
+    .work-card .card-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  
+    .work-card .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: #111;
+    }
+  
+    .work-card .card-desc {
+      font-size: 0.88rem;
+      color: #555;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+      min-height: 48px; /* 설명 입력 전 높이 유지 */
+    }
+  
+    .work-card .card-meta {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+  
+    .work-card .card-meta span {
+      font-size: 0.78rem;
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 3px 10px;
+      color: #444;
+      font-weight: 500;
+    }
+  
+    /* ── 이미지 클릭 커서 ── */
+    .work-card .card-thumb,
+    .work-card .thumb-grid img {
+      cursor: zoom-in;
+      transition: opacity 0.2s ease;
+    }
+    .work-card .card-thumb:hover,
+    .work-card .thumb-grid img:hover {
+      opacity: 0.85;
+    }
+  
+    /* ── 팝업 오버레이 ── */
+    .img-popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 9999;
+      justify-content: center;
+      align-items: flex-start; /* 상단 정렬로 스크롤 가능하게 */
+      padding: 60px 40px 40px;
+      cursor: zoom-out;
+      overflow-y: auto; /* 세로 스크롤 허용 */
+    }
+    .img-popup-overlay.active {
+      display: flex;
+    }
+    .img-popup-overlay img {
+      width: 80vw;   /* 가로 고정 */
+      max-width: 1200px;
+      height: auto;  /* 세로는 비율대로 */
+      border-radius: 8px;
+      box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+      cursor: default;
+      flex-shrink: 0;
+    }
+    .img-popup-close {
+      position: fixed;
+      top: 20px;
+      right: 28px;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 1;
+      cursor: pointer;
+      background: none;
+      border: none;
+      opacity: 0.8;
+      transition: opacity 0.15s;
+    }
+    .img-popup-close:hover { opacity: 1; }
+  
+    /* 반응형 */
+    @media (max-width: 1200px) {
+      .work-grid {
+        padding: 0 40px;
+      }
+      #work-experience .section-title {
+        padding: 0 40px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+      }
+      #work-experience .section-title {
+        padding: 0 20px;
+      }
+    }
+  </style>
+  
+  <!-- ✏️ 섹션 시작 -->
+  <section id="work-experience">
+    <h2 class="section-title">Work Experience</h2>
+  
+    <div class="work-grid">
+  
+      <!-- ─────────────────────────────────────────
+           카드 1 : 뮤직 레이블 사이트 (project_web1~6, web8)
+           여러 페이지 → 썸네일 그리드로 표시
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <div class="thumb-grid">
+          <img src="images/project_web1.png" alt="">
+          <img src="images/project_web2.png" alt="">
+          <img src="images/project_web3.png" alt="">
+          <img src="images/project_web5.png" alt="">
+          <img src="images/project_web6.png" alt="">
+          <img src="images/project_web8.png" alt="">
+        </div>
+      </div>
+  
+      <!-- ─────────────────────────────────────────
+           카드 2 : 뮤직 레이블 로스터 상세 (project_web4)
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <img class="card-thumb" src="images/project_web4.png" alt="">
+        <div class="card-body">
+          <span class="card-tag">실무 프로젝트 | 회사명 비공개 (실제 사용 중입니다)</span>
+          <h3 class="card-title">뮤직 레이블 회사 리뉴얼</h3>
+          <ul class="card-desc">
+            <li>작업 기간: 5개월 (디자인+코딩)</li>
+            <li>프론트 + 백엔드 1인 작업</li>
+            <li>레퍼런스 사이트 참고</li>
+            <li>앨범 이미지 클릭 시 해당 상세 내용 팝업 노출</li>
+          </ul>
+          <div class="card-meta">
+            <span>Photoshop</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ─────────────────────────────────────────
+           카드 3 : 게임 커뮤니티 사이트 (project1)
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <img class="card-thumb" src="images/project1.jpg" alt="">
+        <div class="card-body">
+          <span class="card-tag">실무 프로젝트 | 회사명 비공개</span>
+          <h3 class="card-title">게임 커뮤니티 사이트 리뉴얼</h3>
+          <ul class="card-desc">
+            <li>작업 기간: 4시간</li>
+            <li>회사 자체 포트폴리오용으로 작업</li>
+          </ul>
+          <div class="card-meta">
+            <span>Photoshop</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ─────────────────────────────────────────
+           카드 4 : 지도/지리 서비스 사이트 (project2)
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <img class="card-thumb" src="images/project2.png" alt="">
+        <div class="card-body">
+          <span class="card-tag">실무 프로젝트 | 회사명 비공개</span>
+          <h3 class="card-title">지도/지리 서비스 사이트 리뉴얼</h3>
+          <ul class="card-desc">
+            <li>작업 기간: 4시간</li>
+            <li>회사 자체 포트폴리오용으로 작업</li>
+          </ul>
+          <div class="card-meta">
+            <span>Photoshop</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ─────────────────────────────────────────
+           카드 5 : 식품 쇼핑몰 (project3)
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <img class="card-thumb" src="images/project3.jpg" alt="">
+        <div class="card-body">
+          <span class="card-tag">실무 프로젝트 | 회사명 비공개</span>
+          <h3 class="card-title">식품 쇼핑몰 사이트 리뉴얼</h3>
+          <ul class="card-desc">
+            <li>작업 기간: 4시간</li>
+            <li>회사 자체 포트폴리오용으로 작업</li>
+          </ul>
+          <div class="card-meta">
+            <span>Photoshop</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+  
+      <!-- ─────────────────────────────────────────
+           카드 6 : 화장품 쇼핑몰 (project4 — 여러 페이지)
+      ──────────────────────────────────────────── -->
+      <div class="work-card">
+        <div class="thumb-grid">
+          <img src="images/project4_index.jpg" alt="">
+          <img src="images/project4_list.png" alt="">
+          <img src="images/project4_product.jpg" alt="">
+          <img src="images/project4_login.png" alt="">
+          <img src="images/project4_join.png" alt="">
+          <img src="images/project4_product.png" alt="">
+        </div>
+        <div class="card-body">
+          <span class="card-tag">실무 프로젝트 | 회사명 비공개</span>
+          <h3 class="card-title">화장품 종합 쇼핑몰 리뉴얼</h3>
+          <ul class="card-desc">
+            <li>작업 기간: 4일</li>
+            <li>연보라색을 포인트로 잡아 최대한 깔끔하게 표현</li>
+          </ul>
+          <div class="card-meta">
+            <span>Photoshop</span>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  <!-- ✏️ 섹션 끝 -->
+  
+  <!-- ── 팝업 오버레이 ── -->
+  <div class="img-popup-overlay" id="imgPopup">
+    <button class="img-popup-close" id="imgPopupClose">✕</button>
+    <img src="" alt="" id="imgPopupImg">
+  </div>
+  
+  <script>
+    (function () {
+      const overlay  = document.getElementById('imgPopup');
+      const popupImg = document.getElementById('imgPopupImg');
+      const closeBtn = document.getElementById('imgPopupClose');
+  
+      // Work Experience 섹션 안의 모든 이미지에 클릭 이벤트 등록
+      document.querySelectorAll('#work-experience img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          popupImg.src = img.src;
+          popupImg.alt = img.alt;
+          overlay.classList.add('active');
+          overlay.scrollTop = 0; // 항상 위에서 시작
+          document.body.style.overflow = 'hidden'; // 배경 스크롤 막기
+        });
+      });
+  
+      // 닫기 버튼
+      closeBtn.addEventListener('click', closePopup);
+  
+      // 오버레이 배경 클릭해도 닫기
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closePopup();
+      });
+  
+      // ESC 키로도 닫기
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closePopup();
+      });
+  
+      function closePopup() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+        popupImg.src = '';
+      }
+    })();
+  </script>
+  
